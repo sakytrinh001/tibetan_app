@@ -17,6 +17,9 @@ import android.widget.TextView;
 
 public class FontActivity extends Activity {
 
+
+
+    
     private ImageView img1;
     private ImageView img2;
     private ImageView img3;
