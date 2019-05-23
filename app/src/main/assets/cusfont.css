@@ -1,0 +1,36 @@
+.home1 {
+    font-family: home1;
+}
+
+.home2 {
+    font-family: home2;
+}
+
+.home3 {
+    font-family: home3;
+}
+
+@font-face {
+  font-family: "home1";
+  src: url("fonts/SambhotaDege.ttf");
+}
+
+@font-face {
+  font-family: "home2";
+  src: url("fonts/MonlamUniChoukMatik.ttf");
+}
+
+@font-face {
+  font-family: "home3";
+  src: url("fonts/MonlamUniPayTsik.ttf");
+}
+*{
+    outline: none;
+}
+.uiWebviewHighlight {
+    background-color: #efebc5;
+}
+
+.uiWebviewRemoveHighlight {
+    background-color: ;
+}

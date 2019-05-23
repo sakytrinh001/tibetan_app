@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <View
+            android:background="@color/colorMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <EditText
+                android:id="@+id/edSearch"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/background_border"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:textSize="14dp"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:textCursorDrawable="@null"
+                android:cursorVisible="true"
+                android:layout_alignParentLeft="true"/>
+            <TextView
+                android:id="@+id/tvDoneSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.05"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="བསྒྲུབས་ཚར།"
+                android:textColor="@color/colorButton"
+                />
+
+        </LinearLayout>
+    </FrameLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/lvSearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            ></ListView>
+        <ListView
+            android:id="@+id/lvSearchHis"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            ></ListView>
+        <ProgressBar
+            android:indeterminate="true"
+            android:id="@+id/progressSearch"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/colorMain"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+    </RelativeLayout>
+
+
+</LinearLayout>

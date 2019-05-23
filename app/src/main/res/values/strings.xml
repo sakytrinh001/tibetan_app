@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Tibetan Bible</string>
+    <string name="pathFile">file:///android_asset/ntb</string>
+    <string name="dotfile">.html</string>
+    <string name="webApp">TIBETANBIBLE.COM</string>
+    <string name="kExtraSmall">ལྷག་ཏུ་ཆུང་བ།</string>
+    <string name="kSmall">ཆུང་བ།</string>
+    <string name="kMedium">འབྲིང་ཙམ།</string>
+    <string name="kLarge">ཆེ་བ།</string>
+    <string name="kExtraLarge">ལྷག་ཏུ་ཆེ་བ།</string>
+    <string name="kFont1">དབུ་ཅན།</string>
+    <string name="kFont2">འཁྱུག་ཡིག</string>
+    <string name="kFont3">དཔེ་ཚུགས།</string>
+    <string name="action_settings">Settings</string>
+    <string name="kP1">ཟིན་བྲིས།</string>
+    <string name="kP2">དགའ་ཤོས།</string>
+    <string name="kP3">གསལ་འདེབས།</string>
+    <string name="kP4">བྱུང་ཟིན།</string>
+    <string name="kPrevious">སྔོན་མ།</string>
+    <string name="kNext">རྗེས་མ།</string>
+    <string name="kTitle">དམ་པའི་གསུང་རབ། གཞུང་པོད་འདེམ་རོགས།</string>
+    <string name="image_button_content_description">Change state of section</string>
+
+    <string name="old">ཞལ་ཆད་སྔ་མ།</string>
+    <string name="intro1">དམ་པའི་གསུང་རབ་བོད་འགྱུར་གྱི་བྱུང་རབས།</string>
+    <string name="intro2">སྔོན་དུ་འགྲོ་བའི་གཏམ།</string>
+    <string name="glossary">དམ་པའི་གསུང་རབ་ལས་བྱུང་བའི་མིང་བརྡ་སྐོར་ཞིག</string>
+    <string name="newBook">ཞལ་ཆད་ཕྱི་མ།</string>
+
+</resources>
