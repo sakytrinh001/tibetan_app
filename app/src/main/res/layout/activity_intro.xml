@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
+        android:id="@+id/ll"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -44,49 +45,31 @@
             />
     </RelativeLayout>
     </LinearLayout>
-    <android.support.v4.widget.NestedScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="50dp">
-        <TextView
-            android:id="@+id/tvDetail1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="20dp"
-            />
-    </android.support.v4.widget.NestedScrollView>
-    <!--<LinearLayout-->
-        <!--android:orientation="horizontal"-->
+        android:layout_below="@+id/ll">
+        <WebView
+            android:id="@+id/webViewIntro"
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:clickable="false"
+            android:layout_height="match_parent">
+        </WebView>
+    </LinearLayout>
+    <!--<android.support.v4.widget.NestedScrollView-->
         <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:background="@color/colorMain"-->
-        <!--android:layout_alignParentBottom="true"-->
-        <!--&gt;-->
-        <!--<RelativeLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent">-->
-            <!--<Button-->
-                <!--android:id="@+id/btnPrevIntro"-->
-                <!--android:text="@string/kPrevious"-->
-                <!--style="?android:attr/buttonBarButtonStyle"-->
-                <!--android:textColor="@color/colorButton"-->
-                <!--android:background="@null"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"/>-->
-            <!--<Button-->
-                <!--android:id="@+id/btnNextIntro1"-->
-                <!--android:text="@string/kNext"-->
-                <!--style="?android:attr/buttonBarButtonStyle"-->
-                <!--android:textColor="@color/colorButton"-->
-                <!--android:background="@null"-->
-                <!--android:layout_alignParentRight="true"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"/>-->
-        <!--</RelativeLayout>-->
-
-    <!--</LinearLayout>-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_marginTop="50dp">-->
+        <!--<TextView-->
+            <!--android:id="@+id/tvDetail1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:paddingBottom="20dp"-->
+            <!--/>-->
+    <!--</android.support.v4.widget.NestedScrollView>-->
 
 </RelativeLayout>

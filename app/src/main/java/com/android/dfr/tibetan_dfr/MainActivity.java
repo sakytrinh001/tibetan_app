@@ -18,6 +18,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.text.InputType;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.ActionMode;
@@ -45,6 +46,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -149,7 +151,7 @@ public class MainActivity extends Activity implements View.OnClickListener  {
     private String idText;
     private RelativeLayout rllyMenu, rlViewNote, rlnTop;
     private TextView tvTitleNote, tvDoneNote, tvCancelNote, tvChapterName;
-    private TextView noteText;
+    private EditText noteText;
 
 
     private FrameLayout frlyTop, frlyBottom;
@@ -161,15 +163,41 @@ public class MainActivity extends Activity implements View.OnClickListener  {
     String fontStype = "home1";
     String idVerseChapter = "";
 
-    String setFontSizeSave = "16";
+    String setFontSizeSave = "23";
     boolean isH = false;
     TextView tv1, tv2, tv3, tv4, tv5;
+
+    SeekBar.OnSeekBarChangeListener seekBarChangeListener = new SeekBar.OnSeekBarChangeListener() {
+
+        @Override
+        public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+            // updated continuously as the user slides the thumb
+            Log.e("SeekBar: ", String.valueOf(progress));
+            fontSize = progress;
+            setFontSize(false);
+//            tvProgressLabel.setText("Progress: " + progress);
+        }
+
+        @Override
+        public void onStartTrackingTouch(SeekBar seekBar) {
+            // called when the user first touches the SeekBar
+        }
+
+        @Override
+        public void onStopTrackingTouch(SeekBar seekBar) {
+            // called after the user finishes moving the SeekBar
+        }
+    };
 
     @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        SeekBar seekBar = findViewById(R.id.seekBar);
+        seekBar.setOnSeekBarChangeListener(seekBarChangeListener);
 
         getSaveLocal();
 
@@ -247,7 +275,10 @@ public class MainActivity extends Activity implements View.OnClickListener  {
         rlViewNote = (RelativeLayout) findViewById(R.id.rlNote);
         rlViewNote.setVisibility(View.INVISIBLE);
 
-        noteText = (TextView) findViewById(R.id.edtNote);
+        noteText = (EditText) findViewById(R.id.edtNote);
+        noteText.setEnabled(true);
+        noteText.setInputType(InputType.TYPE_CLASS_TEXT);
+        noteText.setFocusable(true);
 
         tvTitleNote = (TextView) findViewById(R.id.titlenote);
 
@@ -967,7 +998,7 @@ public class MainActivity extends Activity implements View.OnClickListener  {
                         public void run() {
                             progresBar.setVisibility(View.INVISIBLE);
                         }
-                    }, 5000);
+                    }, 4000);
                 }
             }
         });
@@ -1169,7 +1200,6 @@ public class MainActivity extends Activity implements View.OnClickListener  {
                     InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
                     imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
                 }
-                noteText.requestFocus();
                 rlViewNote.setVisibility(View.INVISIBLE);
                 break;
 
@@ -1225,7 +1255,7 @@ public class MainActivity extends Activity implements View.OnClickListener  {
                                 .replaceAll("n", "").replaceFirst("..","").replaceAll("/*", "").replaceAll(" ", "  ");
                         if (feature == 1){
                             if (idText != null){
-                                arrFavourite.add(changeIDFourite() + "\n\n" + getTV);
+                                arrFavourite.add(changeIDFourite() + "\n" + getTV);
                             }
                             saveFavourite();
                         }
@@ -1246,6 +1276,7 @@ public class MainActivity extends Activity implements View.OnClickListener  {
                             if (!idText.equals("null")){
                                 rlViewNote.setVisibility(View.VISIBLE);
                                 tvTitleNote.setText(changeTextID(idText.replace("\"", "")).replace(":", " ").replace("-", ":"));
+                                noteText.requestFocus();
                             }
 
                         }

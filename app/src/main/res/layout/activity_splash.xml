@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:src="@drawable/splash_app"
+        android:src="@drawable/splash_launch"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:contentDescription="@null"

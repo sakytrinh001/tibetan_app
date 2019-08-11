@@ -19,12 +19,11 @@
 
             <ImageView
                 android:id="@+id/imageButton2"
-                android:layout_width="40dp"
+                android:layout_width="50dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="10dp"
                 android:src="@drawable/logotibetan"
-                android:layout_marginTop="1dp"
-                android:layout_marginBottom="1dp"
+                android:scaleX="1.3"
 
                 />
 
@@ -225,7 +224,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
-
                 <ImageView
                     android:id="@+id/imgSettings"
                     android:layout_width="40dp"
@@ -361,12 +359,8 @@
                 android:layout_alignParentRight="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <TextView
+            <EditText
                 android:id="@+id/edtNote"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
                 android:textSize="14sp"
                 android:layout_below="@+id/viewnote"
                 android:layout_width="match_parent"
@@ -374,8 +368,6 @@
                 android:background="@color/colorWhite"/>
 
         </RelativeLayout>
-
-
     </RelativeLayout>
     <ProgressBar
         android:indeterminate="true"
@@ -384,4 +376,16 @@
         android:indeterminateTint="@color/colorMain"
         android:layout_width="50dp"
         android:layout_height="50dp" />
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:max="4"
+        android:progress="2"
+        android:progressBackgroundTint="@color/colorBLACK"
+        android:progressTint="@color/colorMain"
+        android:thumbTint="@color/colorMain"
+        android:layout_alignParentBottom="true"
+        android:layout_width="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="40dp"
+        android:layout_height="wrap_content"/>
 </RelativeLayout>

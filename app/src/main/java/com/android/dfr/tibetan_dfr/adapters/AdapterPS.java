@@ -148,10 +148,6 @@ public class AdapterPS extends BaseAdapter {
     private String changeTextID(String chap){
 
         String currentChap = "";
-        //verse-0-5-36
-//        if (chap.contains("མད་ཐཱའི:")){
-//            return chap.replace("མད་ཐཱའི:", "verse-0-");
-//        }
         for (int i = 0; i < dataIdBook.length; i++) {
             if (chap.contains(dataIdBook[i])){
                 return chap.replace(dataIdBook[i], "verse-" + (i + 36) + "-");
