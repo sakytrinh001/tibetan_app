@@ -60,14 +60,6 @@ public class PersonalActivity extends Activity {
                 startActivityForResult(myIntent, 3);
             }
         });
-//        RelativeLayout rlp4 = (RelativeLayout) findViewById(R.id.rlly_p4);
-//        rlp4.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent myIntent = new Intent(PersonalActivity.this, HistoryActivity.class);
-//                startActivityForResult(myIntent, 4);
-//            }
-//        });
 
     }
 

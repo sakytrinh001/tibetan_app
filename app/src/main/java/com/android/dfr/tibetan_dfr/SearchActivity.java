@@ -116,7 +116,7 @@ public class SearchActivity extends Activity{
                     }
                     lv.setVisibility(View.VISIBLE);
                     lvHis.setVisibility(View.GONE);
-                    adapter.filter("དེ་ཡང་དཀོན་མཆོག་གི་སྲས་ཡེ་ཤུ་མཱ་ཤི་ཀའི་འཕྲིན་བཟང་གི་ཐོག་མ་ནི་འདི་ལྟར་ཡིན༌ཏེ།");
+                    adapter.filter("དེ");
                     InputMethodManager imm = (InputMethodManager)textView.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
                     if (imm != null) {
                         imm.hideSoftInputFromWindow(textView.getWindowToken(), 0);
@@ -211,7 +211,7 @@ public class SearchActivity extends Activity{
             }
         });
 
-        for (int i = 37; i < 64; i++){
+        for (int i = 36; i < 64; i++){
             String fileContents = ReadFile("ntb"+i+".txt");
             separated = fileContents.split("\\\\v");
             List<String> newList = Arrays.asList(separated);

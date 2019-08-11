@@ -44,12 +44,6 @@ public class HistoryActivity extends Activity implements View.OnClickListener {
 
     private void setUp(){
 
-//        SharedPreferences preShare = getSharedPreferences("SAVEALLHIGLIG", MODE_PRIVATE);
-//        Gson gson = new Gson();
-//        String json = preShare.getString("HIGLIGALL", null);
-//        Type type = new TypeToken<ArrayList<String>>(){}.getType();
-//        arrHistory = gson.fromJson(json, type);
-
         imgView1 = (ImageView) findViewById(R.id.checkSXhs1);
         imgView1.setOnClickListener(this);
         imgView1.setVisibility(View.GONE);
